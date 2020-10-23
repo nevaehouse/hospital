@@ -1,0 +1,600 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Malgun Gothic';
+  src: url('../fonts/MalgunGothic.eot');
+  src: url('../fonts/MalgunGothic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/MalgunGothic.woff2') format('woff2'),
+      url('../fonts/MalgunGothic.woff') format('woff'),
+      url('../fonts/MalgunGothic.ttf') format('truetype'),
+      url('../fonts/MalgunGothic.svg#MalgunGothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box;}
+html, body { font-family: 'Malgun Gothic'; margin: 0; padding: 0;}
+header, section, article, aside, nav, main, footer { display:block;}
+header:after, section:after, article:after, aside:after, nav:after, main:after, footer:after {
+  content:''; display: block; clear:both;}
+h1, h2, h3, h4, h5, h6, p { margin: 0;}
+ul, ol { margin: 0; padding: 0; list-style: none;}
+a { text-decoration: none;}
+.clear {clear:both;}
+
+/* 헤더CSS */
+header {}
+
+/* 최상단 */
+header .top {
+  height: 40px;
+  background-color: #363636;
+}
+header .top .wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #363636;
+}
+header .top .wrap .info {
+  float: left;
+  padding-left: 10px;
+}
+header .top .wrap .info p {
+  color: #c8c8c8;
+  font-size: 14px;
+  line-height: 40px;
+}
+header .top .wrap .link {
+  float: right;
+  padding: 13px 0;/*40-14/2*/
+}
+header .top .wrap .link ul {}
+header .top .wrap .link ul li {
+  float: left;
+}
+header .top .wrap .link ul li a {
+  display: block;
+  line-height: 1; /*1배수*/
+  border-right: 1px solid #c8c8c8;
+  color: #c8c8c8;
+  padding: 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+header .top .wrap .link ul li:last-child a {
+  border-right:none;
+}
+header .top .wrap .link ul li:hover a {
+  color:#fff;
+}
+
+/* 로고와 메인메뉴 */
+header .main {
+  height: 80px;
+  background-color: #fff;
+  position: relative;
+}
+header .main .wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+header .main .wrap .logo {
+  float: left;
+  padding: 10px 0 10px 10px; /*80-60/2*/
+}
+header .main .wrap .logo a {
+  display: block;
+}
+header .main .wrap .logo a img {
+  display: block;
+  height: 60px;
+}
+
+header .main .wrap .menu {
+  float:right;
+}
+header .main .wrap .menu > ul {
+  padding-right: 10px;
+}
+header .main .wrap .menu > ul > li {
+  float: left;
+  margin: 0 15px;
+}
+header .main .wrap .menu > ul > li:nth-child(1) > div > ul {
+  text-align: center;
+  padding-right: 50px;
+  /* padding-right: 420px; */
+}
+header .main .wrap .menu > ul > li:nth-child(2) > div > ul {
+  /* padding-right: 200px; */
+  text-align: center;
+  padding-left: 150px;
+}
+header .main .wrap .menu > ul > li:last-child {
+  margin-right: 0;
+}
+header .main .wrap .menu > ul > li > a {
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+  color: #363636;
+  padding: 32px 0 28px; /*80-64/2*/
+  border-bottom: 4px solid transparent;
+  font-weight: bold;
+}
+
+header .main .wrap .menu > ul > li:hover > a {
+  border-bottom: 4px solid #004ea1;
+  color: #004ea1;
+}
+header .main .wrap .menu > ul > li > div {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: rgba(255,255,255,0.4);
+  display: none; /*하위메뉴가리기*/
+}
+header .main .wrap .menu > ul > li:hover > div {
+  display: block; /*하위메뉴보이기*/
+}
+header .main .wrap .menu > ul > li > div > ul {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 0;
+  text-align: right;
+  padding: 0 10px;
+}
+header .main .wrap .menu > ul > li > div > ul > li {
+  display: inline-block;
+  margin: 0 20px;
+}
+header .main .wrap .menu > ul > li > div > ul > li:last-child {
+  margin-right: 0;
+}
+header .main .wrap .menu > ul > li > div > ul > li > a {
+  display: block;
+  font-size: 14px;
+  line-height: 40px;
+  color: #363636;
+}
+
+/* 첫 번째 단락 : 메인이미지 */
+main {
+  height: 280px;
+  background-size: cover;
+  background-image: url(../img/main-02.jpg);
+  background-position: 50% 100%;
+}
+
+#bottom_btn {
+  padding: 20px 0;
+  background-color: #d3dce5;
+}
+#bottom_btn .wrap {
+  width: 1200px;
+  font-size: 0;
+  margin: 0 auto;
+}
+#bottom_btn .wrap ul {}
+#bottom_btn .wrap ul li {
+  width: calc(100% / 12 - 20px); /*80px*/
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+#bottom_btn .wrap ul li a {display: block;} /*아이콘가로길이맞추기*/
+#bottom_btn .wrap ul li img {
+  display: block;/*아이콘가로길이맞추기*/
+  width: 100%;/*아이콘가로길이맞추기*/
+}
+
+
+/* 두 번째 단락 : 이미지 목차 */
+#cont1 {
+  background-color: #efedef;
+}
+#cont1 .wrap {
+  width: 1200px;
+  height: auto; /*안써도됨*/
+  margin: 0 auto;
+  font-size: 0;
+  padding-top: 20px;
+}
+/* 1,2,5,6 번째 박스 */
+#cont1 .wrap article {
+  width: calc(25% - 20px);
+  height: 280px;
+  margin: 0 10px 20px; /*아래콘텐츠가위로올라오지못하게마진값을준것*/
+  display: inline-block;
+  vertical-align: top;/*글가운데배치*/
+  background-color: #004ea1;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 20px;
+}
+#cont1 .wrap article:nth-child(2n) {
+  background-color: #03d365;
+}
+#cont1 .wrap article:nth-child(3) {
+  width: calc(50% - 20px);
+  background-image: url(../img/cont-001.jpg);
+}
+#cont1 .wrap article:nth-child(4) {
+  width: calc(50% - 20px);
+  background-color: #fff;
+}
+
+#cont1 .wrap article .in_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#cont1 .wrap article .in_box h3 {
+  font-size: 36px;
+  color: #fff;
+  line-height: 1;
+}
+#cont1 .wrap article .in_box p {
+  font-size: 18px;
+  color: #fff;
+  padding-top: 34px;
+  word-break: keep-all;/*단어단위로줄바꿈*/
+}
+/* word-break: keep-all; 한글, 중문, 일문 캐릭터의 특징은 개별적인 글자를 통해 조합하려는 경향이 있기에 단어를 기준으로 단어 영역을 묶을 때 사용*/
+
+#cont1 .wrap article .in_box ul {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+#cont1 .wrap article .in_box ul li {
+  display: inline-block;
+  width: 50%;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff; 
+}
+#cont1 .wrap article .in_box ul li a {
+  display: block;
+  line-height: 36px;/*h40-b4*/
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+#cont1 .wrap article .in_box ul li:hover a {
+  background-color: rgba(255,255,255,0.4);
+}
+
+/* 세 번째 박스 */
+/* 클래스를 넣어도 명시도가 달라 적용안된다. 
+   위: 122, 여기는 131점*/
+#cont1 .wrap article .in_box .black {
+  color: #363636;
+}
+#cont1 .wrap article .in_box .search_box {
+  position: absolute;
+  width: 360px;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+}
+#cont1 .wrap article .in_box .search_box input {
+  display: inline-block;
+  border: 2px solid #004ea1;
+  width: calc(100% - 120px);/*유동값*/
+  height: 40px;
+  font-size: 16px;
+  padding: 0 10px;
+  vertical-align: top;
+}
+
+#cont1 .wrap article .in_box .search_box button {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  background-color: #004ea1;
+  color: #fff;
+  font-size: 18px;
+  border:none;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+/* 네 번째 박스 */
+#cont1 .wrap article:nth-child(4) .in_box .prize_img {
+  display: inline-block;
+  vertical-align: top;
+  width: 240px;
+  height: 100%;
+  /* wrap에 font-size:0했기에 또적용안해도됨 */
+  background-image: url(../img/prize.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#cont1 .wrap article:nth-child(4) .in_box .prize_txt {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 260px);/*240에마진20추가*/
+  height: 100%;
+  margin-left: 20px;
+  position: relative;
+}
+#cont1 .wrap article:nth-child(4) .in_box .prize_txt .black {
+  color: #363636;
+}
+#cont1 .wrap article:nth-child(4) .in_box .prize_txt p {
+  font-size: 14px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+#cont1 .wrap article:nth-child(4) .in_box .prize_txt a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  width: 160px;
+  border: 2px solid #004ea1;
+  display: block;
+  line-height: 34px;
+  background-color: #e5e5e5;
+  color: #004ea1;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+#cont1 .wrap article:nth-child(4) .in_box .prize_txt a:hover {
+  background-color: #c5c5c5;
+}
+
+/* 세 번째 단락 : 가운데 이미지 */
+#banner_01 {
+  height: 464px;
+  background-image: url(../img/health-care.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#banner_01 .wrap {
+  width: 1200px;
+  height: 100%; /* por할거면h값넣어야함*/
+  margin: 0 auto;
+  position: relative;
+}
+#banner_01 .wrap .banner_cont {
+  position: absolute;
+  width: 340px;
+  top:50%; /*이미지배치, 부모로부터50%떨어짐*/
+  right: 150px;
+  transform: translateY(-50%);/*이미지배치 본인높이의절반값을올림*/
+  text-align: center;
+}
+#banner_01 .wrap .banner_cont h2 {
+  font-size: 36px;
+  color: #363636;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+#banner_01 .wrap .banner_cont img {
+  width: 180px;
+}
+
+/* 네 번째 단락 */
+#cont2 {}
+#cont2 .wrap{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;/* 마진은자식을끌고올라와서이상한여백이생김.프레임잡을때는패딩값을준다 */
+  text-align: center;/*아래까지상속*/
+}
+#cont2 .wrap .sec_title {}
+#cont2 .wrap .sec_title h3 {
+  font-size: 36px; 
+  line-height: 60px;
+  color: #363636;
+}
+#cont2 .wrap .sec_title p {
+  font-size: 20px;
+  padding: 20px 0;
+  line-height: 1;
+  color: #363636;
+}
+#cont2 .wrap .sec_cont {
+  font-size: 0;/*부모에꼭넣어야한다*/
+}
+#cont2 .wrap .sec_cont .cont_box {
+  display: inline-block;/*드래그했을때공간생김*/
+  width: calc(25% - 20px);
+  margin: 0 10px 20px;
+  height: 376px;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 20px;
+  vertical-align: top;/*inline-block은 bottom이 기본값이기에 vat해야한다.*/
+}
+#cont2 .wrap .sec_cont .cont_box:nth-child(1) {background-image: url(../img/cont-002.jpg); }
+#cont2 .wrap .sec_cont .cont_box:nth-child(2) {background-image: url(../img/cont-003.jpg); }
+#cont2 .wrap .sec_cont .cont_box:nth-child(3) {background-image: url(../img/cont-004.jpg); }
+#cont2 .wrap .sec_cont .cont_box:nth-child(4) {background-image: url(../img/cont-005.jpg); }
+
+#cont2 .wrap .sec_cont .cont_box h4 {
+  font-size: 24px;
+  color: #fff;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+#cont2 .wrap .sec_cont .cont_box .bar {
+  width: 80px;
+  height: 4px;
+  background-color: #fff;
+  /*margin: 0 auto;*//*width값과block일때 해도된다.*/
+  display: inline-block;/*마진0auto대신 dib해도된다.*/
+  /*블록이기에 width값 넣으면 안된다.*/
+}
+
+/* 
+  일정 공간(width값 존재, height값 존재할 때)을 가로방향으로 가운데 배치하는 방법 :
+  display:bloc; 인 경우, 본인에게 margin:0 auto를 선언
+  display:inline-block; 인 경우, 부모 (또는 그 이상)에게 text-align : center를 선언한다.
+*/
+
+#cont2 .wrap .sec_cont .cont_box p {
+  font-size: 18px;
+  color: #fff;
+  padding : 20px;
+  word-break: keep-all;
+}
+#cont2 .wrap .sec_cont .cont_box:last-child p{
+  padding: 20px 0;
+}
+#cont2 .wrap .sec_cont .cont_box ul {
+  width: 120px;
+  margin: 0 auto;
+  border:2px solid #fff;
+  border-bottom: none;
+}
+#cont2 .wrap .sec_cont .cont_box ul li {}
+#cont2 .wrap .sec_cont .cont_box ul li a {
+  display: block;
+  line-height: 38px;
+  border-bottom: 2px solid #fff;
+  font-size: 18px;
+  color: #fff;
+  transition: background-color 0.5s;
+}
+#cont2 .wrap .sec_cont .cont_box ul li:hover a {
+  background-color: rgba(255,255,255,0.4);
+}
+
+/* 다섯 번째 단락 : footer*/
+footer {
+  padding: 20px 0;
+  background-color: #474747;
+  text-align: center;/*상속가능해아래까지적용*/
+  font-size: 0;/*상속가능해아래까지적용*/
+}
+footer .wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* border-bottom은 .footer_top이나 ul 아무데나 넣어도 된다. */
+footer .wrap .footer_top {
+  padding-bottom: 20px;
+}
+footer .wrap .footer_top ul {
+  border-bottom: 1px solid #fefefe;
+  padding-bottom: 20px;
+}
+footer .wrap .footer_top ul li {
+  display: inline-block;
+}
+footer .wrap .footer_top ul li p {
+  line-height: 1;
+  color: #fefefe;
+  padding: 0 10px;
+  border-right: 1px solid #fefefe;
+  font-size: 13px;
+}
+footer .wrap .footer_top ul li:last-child p {
+  border-right: none;
+} 
+
+footer .wrap .footer_link {}
+footer .wrap .footer_link ul {}
+footer .wrap .footer_link ul li {
+  display: inline-block;
+}
+footer .wrap .footer_link ul li a {
+  display: block;
+  font-size: 13px;
+  color: #fefefe;
+  padding: 0 10px;
+  line-height: 1;
+  border-right: 1px solid #fefefe;
+}
+footer .wrap .footer_link ul li:last-child a {
+  border: none;
+}
+
+footer .wrap .footer_main {
+  padding-top: 20px;
+}
+footer .wrap .footer_main .general {
+  font-size: 13px;
+  color: #fefefe;
+  padding-bottom: 20px;
+}
+footer .wrap .footer_main img {
+  height: 55px;
+}
+footer .wrap .footer_main .copyrights {
+  font-size: 13px;
+  color: #fefefe;
+  padding-top: 20px;
+
+}
+
+
+
+
+
+
+
+/* 아이패드세로 */
+@media (max-width: 767px){
+  .responsive_768_down_dnone {display: none;}
+}
+
+
+
+
+#test {
+  padding: 20px 0;
+  background-color: #aaffff;
+}
+#test img {
+  display: inline-block;
+  /* vertical-align: middle; */
+  text-align: text-bottom;
+  /* text-align: baseline; 아래로쳐져버림 */
+
+}
+#test span {
+  display: inline-block; 
+  /* vertical-align: middle; */
+}
+/*
+높이가 높은 이미지에 vertical-align: middle; 했을 때는 span도 같이 vertical-align: middle; 값 적용.
+하지만 span에만 vertical-align: middle;를 줄 때는 이미지에 값이 적용 안됨.banner_cont
+=>> 상대적으로 큰 것에 vertical-align: middle;를 적용해야 작은것도 적용됨
+
+하지만 span에도 vertical-align: middle;값을 주는 이유는 상대적인 값을 정확히 만들기 위해
+*/
+/*
+#test2 {
+  padding: 20px 0;
+  background-color: #ffffaa;
+}
+#test2 img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 60px;
+}
+#test2 span {
+  line-height: 1;
+  margin-top: 10px;
+  display: inline-block;
+}
+*/
+/* vertical은 margin-top, padding-top을 주면안된다 > 이미지와 텍스트가 같이 위치이동됨 */
+
+/*
+  vertical-align 선언 시 상대의 위치를 조정하게 된다. 
+  다만, 강제로 부여된 margin과 padding은 수직 방향의 위치 조정 없이 형제 요소를 함께 내려버리는 역할을 하기에 
+  절/대/ 부여하지 말 것!!!!!
+*/
